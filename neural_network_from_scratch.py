@@ -67,7 +67,7 @@ class NN:
             random_data_point = data[np.random.randint(len(data))]
             y = random_data_point[1]
             pred = self.forward(random_data_point[0])
-            cost = np.sum(np.square(pred - y))
+            cost = np.sum(np.square(y - pred))
             costs.append(cost)
             
             #All partical derivatives
